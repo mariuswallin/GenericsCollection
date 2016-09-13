@@ -109,13 +109,20 @@ namespace CollectionGenerics
     }
 
 
-   /// Generic Collection interface
-   /// IEnumerable, ICollection, IList
-   /// Arves av array og List automatisk, IDicionary kommer med directories
-   /// public staic List<string> SendEmail(IList<vendor> vendors, string message) - kan da sende inn array eller liste
-   /// Generic interface når man passer collections til metoder. 
-   /// 
-   /// 
+    /// Generic Collection interface
+    /// IEnumerable, ICollection, IList
+    /// Arves av array og List automatisk, IDicionary kommer med directories
+    /// public staic List<string> SendEmail(IList<vendor> vendors, string message) - kan da sende inn array eller liste
+    /// Generic interface når man passer collections til metoder. 
+    /// 
+    /// IEnumerable -> kan iterere men ikke legge til fjerne elementer - readonly
+    ///
+    /// yield -> 
+    ///
+    ///
+
+
+
 
 
 
