@@ -77,17 +77,28 @@ namespace CollectionGenerics
     public class GenericList<T>
     {
 
+        
+
         public GenericList()
         {
+            var liste = new List<T>();
+
+            Object value;
+            //try get value
+            if (value.enMetode("verdinavn", out value)
+                {
+                Console.WriteLine(value);
+            }
+            
+
         }
 
-        public GenericList(T result, string message) : this()
+        public GenericList(T message) : this()
         {
-            this.Result = result;
-            this.Message = message;
+            
         }
 
-
+        
 
         public T Result { get; set; }
         public string Message { get; set; }
@@ -98,6 +109,13 @@ namespace CollectionGenerics
     }
 
 
+   /// Generic Collection interface
+   /// IEnumerable, ICollection, IList
+   /// Arves av array og List automatisk, IDicionary kommer med directories
+   /// public staic List<string> SendEmail(IList<vendor> vendors, string message) - kan da sende inn array eller liste
+   /// Generic interface når man passer collections til metoder. 
+   /// 
+   /// 
 
 
 
