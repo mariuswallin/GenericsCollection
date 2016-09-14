@@ -11,7 +11,7 @@ namespace CollectionGenerics
         public Array() { }
 
         public Array(string one, string two, string three, string four)
-        { 
+        {
 
             // effektivt når man vet lengden på arrayen
             var colorOptions = new string[4];
@@ -21,7 +21,7 @@ namespace CollectionGenerics
             colorOptions[3] = four;
 
             // collection initialiser
-            string[] colorOptionsTwo = { "En", "To", "Tre"};
+            string[] colorOptionsTwo = { "En", "To", "Tre" };
 
             // skrive ut som i javascript
             // iterere foreach eller for (kan editere under loop det kan man ikke paa foreach)
@@ -49,8 +49,8 @@ namespace CollectionGenerics
     // where T : new() - type med parameterløs const
     // where T : Vendor (arv)
     // where T : IVendor (interface)
-  
-     
+
+
     public class Generics<T>
     {
 
@@ -64,20 +64,20 @@ namespace CollectionGenerics
             this.Message = message;
         }
 
-        
+
 
         public T Result { get; set; }
         public string Message { get; set; }
 
 
-      
+
 
     }
 
     public class GenericList<T>
     {
 
-        
+
 
         public GenericList()
         {
@@ -89,16 +89,16 @@ namespace CollectionGenerics
                 {
                 Console.WriteLine(value);
             }
-            
+
 
         }
 
         public GenericList(T message) : this()
         {
-            
+
         }
 
-        
+
 
         public T Result { get; set; }
         public string Message { get; set; }
@@ -117,9 +117,64 @@ namespace CollectionGenerics
     /// 
     /// IEnumerable -> kan iterere men ikke legge til fjerne elementer - readonly
     ///
-    /// yield -> 
+    /// yield -> husker hvor den er ved return. returnerer kun en av gangen. Lazy evaluation
     ///
     ///
+
+    // Events delegates og event handlers
+
+    // Events -> notifications. 
+    // Delegates -> pipline mellom event og eventhandler. 
+    /// 
+
+    // Creating delegate
+
+    public delegate void Funksjon(parametre);
+
+    // Handler
+
+    public void handlernavn(samme parmetre);
+
+    // Connection
+
+    Funksjon navn = new Funksjon(handlernavn);
+
+    navn(parametre);
+
+    // Kombinere flere
+
+    navn1 += navn2;
+        navn1(parametre);
+
+    // Kan putte (Funksjon navn) inn i en funksjon for å gjøre det dynamisk
+    // return value -> returnerer kun siste delegate
+
+    // Event:
+
+    public event DelegateNavn eventNavne;
+
+    protected virtual void Navn(parametre som går igjen);
+    {
+
+    var del = evenvariabelnavn as delegate/eventhandlernavnet;
+    if (del != null)
+        {
+
+        //handle event
+}
+
+}
+
+
+
+    // Delegate (method, target, getInvocationsList())
+
+    // Lambdas -> effektiv programmering
+    // inline metode hvor compileren gjør magi
+    // 
+
+    public void Process(int x, int y);
+
 
 
 
