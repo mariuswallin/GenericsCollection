@@ -160,11 +160,21 @@ namespace CollectionGenerics
     if (del != null)
         {
 
-        //handle event
-}
+        // EventArgs class
 
-}
+    public class metodenavn : System.EventArgs
+    {
+        props
+    }
 
+    //handle event
+
+
+
+
+
+
+    public event void EventHandler<metodenavn> eventNavne;
 
 
     // Delegate (method, target, getInvocationsList())
@@ -175,6 +185,36 @@ namespace CollectionGenerics
 
     public void Process(int x, int y);
 
+
+    // Lambda costum delegates
+
+    public delegate in EtNavn(int x, int y);
+
+    EtNavn addDel = (x, y) => x + y;
+    EtNavn multiDel = (x, y) => x * y;
+
+    var data = new ProcessData();
+    data.Process(2, 3, addDel);
+
+    Action<int, int> myAction = (x, y) => Console.WriteLine(x + y);
+
+    // lage en annen klasse som sier noe om hvordan delegaten behandles. +, * etc
+
+  public class ProcessData
+      public void Process(int x, int y, EtNavn del)
+        var result = del(x, y);
+        Console.Write(result);
+
+
+        public void ProcessAction(int x, int y,Action<int, int> action)
+            action(x, y);
+
+
+
+
+
+
+       // Action<T> mottar en parameter men returnerer ikke noe
 
 
 
